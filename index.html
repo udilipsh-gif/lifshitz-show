@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>הופעת הסטנד אפ של האחיות לבית ליפשיץ</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f4f9;
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .ticket-container {
+            background-color: #fff;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            text-align: center;
+            max-width: 400px;
+            width: 100%;
+        }
+        h1 {
+            color: #ff4757;
+            font-size: 26px;
+            margin-bottom: 10px;
+        }
+        p.description {
+            color: #747d8c;
+            margin-bottom: 30px;
+            font-size: 16px;
+        }
+        .form-group {
+            margin-bottom: 20px;
+            text-align: right;
+        }
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+        input[type="number"], input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #dfe4ea;
+            border-radius: 5px;
+            box-sizing: border-box;
+            font-family: inherit;
+        }
+        button {
+            background-color: #ff4757;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            font-size: 18px;
+            border-radius: 50px;
+            cursor: pointer;
+            width: 100%;
+            transition: background-color 0.3s;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+        button:hover {
+            background-color: #ff6b81;
+        }
+        #success-message {
+            display: none;
+            margin-top: 20px;
+            padding: 20px;
+            background-color: #2ed573;
+            color: white;
+            border-radius: 10px;
+            font-weight: bold;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="ticket-container">
+        <h1>הופעת הסטנד אפ של האחיות לבית ליפשיץ</h1>
+        <p class="description">הצטרפו אלינו לערב קורע מצחוק! אל תפספסו.</p>
+        
+        <div id="booking-form">
+            <div class="form-group">
+                <label for="name">שם מלא:</label>
+                <input type="text" id="name" placeholder="הכנס/י שם מלא">
+            </div>
+            <div class="form-group">
+                <label for="tickets">מספר כרטיסים:</label>
+                <input type="number" id="tickets" min="1" max="10" value="1">
+            </div>
+            
+            <button onclick="buyTickets()">לרכישת כרטיסים</button>
+        </div>
+
+        <div id="success-message">
+            🎉 איזה כיף! הכרטיסים (בכאילו) הוזמנו בהצלחה.<br>נתראה בהופעה!
+        </div>
+    </div>
+
+    <script>
+        function buyTickets() {
+            var name = document.getElementById('name').value;
+            
+            // בדיקה שהמשתמש הזין שם
+            if(name.trim() === "") {
+                alert("נא להזין שם כדי להמשיך :)");
+                return;
+            }
+            
+            // הסתרת טופס ההזמנה והצגת הודעת ההצלחה
+            document.getElementById('booking-form').style.display = 'none';
+            document.getElementById('success-message').style.display = 'block';
+        }
+    </script>
+</body>
+</html>
