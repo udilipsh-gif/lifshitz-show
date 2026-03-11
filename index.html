@@ -131,12 +131,12 @@
 <body>
 
     <div class="poster-container">
-        <img src="https://github.com/udilipsh-gif/lifshitz-show/blob/main/Gemini_Generated_Image_p633rxp633rxp633.png" alt="כרזת מופע האחיות לבית ליפשיץ" class="poster-image">
+        <img src="picture.jpg" alt="כרזת מופע האחיות לבית ליפשיץ" class="poster-image">
     </div>
 
     <div class="ticket-container">
         <h1>הבטיחו את מקומכם!</h1>
-        <p class="description">ערב קורע מצחוק באמפי קיסריה. מלאו פרטים (בכאילו) להזמנה.</p>
+        <p class="description">ערב קורע מצחוק באמפי קיסריה. מלאו פרטים להזמנה.</p>
         
         <div id="booking-form">
             <div class="form-group">
@@ -148,12 +148,13 @@
                 <input type="number" id="tickets" min="1" max="10" value="1">
             </div>
             
-            <button onclick="buyTickets()">לרכישת כרטיסים (בכאילו)</button>
+            <button onclick="buyTickets()">לרכישת כרטיסים </button>
         </div>
 
         <div id="success-message">
             🎉 🎉 🎉<br>
-            ! חשבונך חוייב ב560 ש"ח איזה כיף! הכרטיסים הוזמנו בהצלחה.<br>
+            !איזה כיף! הכרטיסים הוזמנו בהצלחה.<br>
+            חשבונך חוייב בסך 560 ש"ח, לא יינתן החזר
             נתראה בקיסריה ב-01.04.2026!
         </div>
     </div>
@@ -163,7 +164,7 @@
             var name = document.getElementById('name').value;
             
             if(name.trim() === "") {
-                alert("נא להזין שם מלא כדי שנוכל (בכאילו) לשמור לכם מקום! :)");
+                alert("נא להזין שם מלא כדי שנוכל  לשמור לכם מקום! :)");
                 return;
             }
             
@@ -174,4 +175,5 @@
     </script>
 </body>
 </html>
+
 
